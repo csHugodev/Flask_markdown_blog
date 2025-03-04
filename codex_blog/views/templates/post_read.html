@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}Inicio - Hugo's Codex{% endblock %}
+
+{% block content %}
+    <div class="text-left">
+        <h1>{{ title }}</h1>
+        <p>Autor: {{ autor }}</p>
+        <p>Fecha: {{ fecha }}</p>
+        {{ mdContent | safe }}
+    </div>
+{% endblock %}

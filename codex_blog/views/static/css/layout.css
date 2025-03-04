@@ -1,0 +1,67 @@
+/* Variables de colores y fuente */
+:root {
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #000000;
+    --navbar-bg: #f8f9fa;
+    --navbar-text: #000000;
+    --navbar-dark-text: #b0b0b0;
+    --font-family: 'Roboto', sans-serif; /* Fuente global */
+}
+
+/* Modo oscuro */
+.dark-mode {
+    --bs-body-bg: #212529;
+    --bs-body-color: #b0b0b0;
+    --navbar-bg: #343a40;
+    --navbar-text: var(--navbar-dark-text);
+}
+
+/* Aplicar estilos generales */
+body {
+    font-family: var(--font-family);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Navbar personalizado */
+.navbar-custom {
+    background-color: var(--navbar-bg) !important;
+}
+
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+    color: var(--navbar-text) !important;
+}
+
+/* Importar estilos de Pygments */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css');
+
+/* Estilo para el bloque de código <pre> en modo claro */
+pre {
+    background-color: var(--bs-light, #f8f9fa); /* Fondo claro en modo claro */
+    color: var(--bs-dark, #212529);  /* Texto oscuro en modo claro */
+    padding: 1rem;  /* Espaciado alrededor del código */
+    border-radius: 4px;  /* Bordes redondeados */
+    font-family: monospace;  /* Fuente de tipo monoespaciado */
+    overflow-x: auto; /* Agregar desplazamiento horizontal si el código es largo */
+}
+
+/* Estilo para el bloque de código <pre> en modo oscuro */
+body.dark-mode pre {
+    background-color: #343a40; /* Fondo oscuro en modo oscuro */
+    color: var(--bs-light, #f8f9fa);  /* Texto claro en modo oscuro */
+    border: 1px solid #495057;
+}
+
+code {
+    background-color: var(--bs-code-bg, #f8f9fa);  /* Fondo claro */
+    color: var(--bs-code-color);  /* Color de texto oscuro */
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+body.dark-mode code{
+    background-color: var(--bs-code-bg, #343a40); /* Fondo oscuro */
+    color: var(--bs-code-color); /* Color de texto claro */
+}
